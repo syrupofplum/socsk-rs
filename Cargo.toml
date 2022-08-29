@@ -1,0 +1,18 @@
+[package]
+name = "socsk-rs"
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+authors = ["Xin Guan <syrupofplum@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "~1.18", features = ["rt", "rt-multi-thread", "io-util", "net", "macros"] }
+
+[lib]
+name = "socks_lib"
+path = "src/lib.rs"
+
+[[example]]
+name = "tcp"
